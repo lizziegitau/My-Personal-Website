@@ -1,104 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Personal Website</title>
-    <link rel="icon" href="icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="icon" href="icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
 
-<body>
+  <body>
     <header class="header">
+      <section>
         <h1 class="header__h1">
-            💖 Elizabeth Gitau 💖
+          <a href="#hero">💖 Elizabeth Gitau 💖</a>
         </h1>
-        <nav class="header__nav">
-            <ul class="header__ul">
-                <li>
-                    <a href="#portfolio">Portfolio</a>
-                </li>
-                <li>
-                    <a href="work.html">My Works</a>
-                </li>
-                <li>
-                    <a href="about.html">About Me</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact Me</a>
-                </li>
-            </ul>
+        <div>
+          <button
+            id="hamburger-button"
+            class="relative h-8 w-8 cursor-pointer text-3xl md:hidden"
+          >
+            <!--  &#9776; -->
+            <div
+              class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-white transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-white before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-white after:transition-all after:duration-500 after:content-['']"
+            ></div>
+          </button>
+          <nav
+            class="hidden space-x-8 text-xl sm:block"
+            aria-label="main header__nav"
+          >
+            <a href="#portfolio" class="hover:opacity-90">Portfolio</a>
+            <a href="work.html" class="hover:opacity-90">My Works</a>
+            <a href="about.html" class="hover:opacity-90">About Me</a>
+            <a href="contact.html" class="hover:opacity-90">Contact Me</a>
+          </nav>
+        </div>
+      </section>
+      <section
+        id="mobile-menu"
+        class="top-68 justify-content-center absolute hidden w-full origin-top animate-open-menu flex-col bg-black text-5xl"
+      >
+        <!-- <button class="text-8xl self-end px-6">
+                &times;
+            </button> -->
+        <nav
+          class="flex min-h-screen flex-col items-center py-8"
+          aria-label="mobile"
+        >
+          <a href="#hero" class="w-full py-6 text-center hover:opacity-90"
+            >Home</a
+          ><br />
+          <a href="#portfolio" class="w-full py-6 text-center hover:opacity-90"
+            >Portfolio</a
+          ><br />
+          <a href="about.html" class="w-full py-6 text-center hover:opacity-90"
+            >About Me</a
+          ><br />
+          <a href="work.html" class="w-full py-6 text-center hover:opacity-90"
+            >My Works</a
+          ><br />
+          <a
+            href="contact.html"
+            class="w-full py-6 text-center hover:opacity-90"
+            >Contact Me</a
+          ><br />
         </nav>
+      </section>
     </header>
-
     <section class="hero">
-        <h2 class="hero__h2">Hola, soy Liz!</h2>
-        <figure class="fig1">
-            <img src="img/Lizzie 500x1216.jpg" alt="Liz" title="Elizabeth Muthoni Gitau" width="500" height="1216">
-            <figcaption class="offscreen">
-                Elizabeth Muthoni Gitau
-            </figcaption>
-        </figure>
+      <h2 class="hero__h2">Hola, soy Liz!</h2>
+      <figure class="fig1">
+        <img
+          src="img/Lizzie 500x1216.jpg"
+          alt="Liz"
+          title="Elizabeth Muthoni Gitau"
+          width="500"
+          height="1216"
+        />
+        <figcaption class="offscreen">Elizabeth Muthoni Gitau</figcaption>
+      </figure>
     </section>
 
     <main class="main">
-        <article id="portfolio" class="article__main portfolio">
-            <h2 class="portfolio__h2">My Portfolio</h2>
+      <article id="portfolio" class="article__main portfolio">
+        <h2 class="portfolio__h2">My Portfolio</h2>
 
-            <figure>
-                <img src="img/Baby Liz 375x500.jpg" alt="BabyLiz" width="375" height="500">
-                <figcaption>
-                    Baby Liz with her beloved vuvuzela😂😂
-                </figcaption>
-            </figure>
-            <br>
+        <figure>
+          <img
+            src="img/Baby Liz 375x500.jpg"
+            alt="BabyLiz"
+            width="375"
+            height="500"
+          />
+          <figcaption>Baby Liz with her beloved vuvuzela😂😂</figcaption>
+        </figure>
+        <br />
 
-            <figure>
-                <img src="img/Liz in First Grade.jpg" alt="First Grade" width="469" height="934">
-                <figcaption>
-                    Liz in First Grade👧
-                </figcaption>
-            </figure>
-            <br>
+        <figure>
+          <img
+            src="img/Liz in First Grade.jpg"
+            alt="First Grade"
+            width="469"
+            height="934"
+          />
+          <figcaption>Liz in First Grade👧</figcaption>
+        </figure>
+        <br />
 
-            <figure>
-                <img src="img/Siblings 841x916.jpg" alt="Siblings" width="841" height="916">
-                <figcaption>
-                    Liz with her brothers
-                </figcaption>
-            </figure>
-            <br>
+        <figure>
+          <img
+            src="img/Siblings 841x916.jpg"
+            alt="Siblings"
+            width="841"
+            height="916"
+          />
+          <figcaption>Liz with her brothers</figcaption>
+        </figure>
+        <br />
 
-            <figure>
-                <img src="img/Siblings and Dad 600x450.jpg" alt="Dad" width="600" height="400">
-                <figcaption>
-                    Liz and Dad
-                </figcaption>
-            </figure>
-            <br>
+        <figure>
+          <img
+            src="img/Siblings and Dad 600x450.jpg"
+            alt="Dad"
+            width="600"
+            height="400"
+          />
+          <figcaption>Liz and Dad</figcaption>
+        </figure>
+        <br />
 
-            <figure>
-                <img src="img/Liz and Mum 405x900.jpg" alt="Mum" width="405" height="900">
-                <figcaption>
-                    Liz and Mum
-                </figcaption>
-            </figure>
-            <br>
-        </article>
+        <figure>
+          <img
+            src="img/Liz and Mum 405x900.jpg"
+            alt="Mum"
+            width="405"
+            height="900"
+          />
+          <figcaption>Liz and Mum</figcaption>
+        </figure>
+        <br />
+      </article>
     </main>
-    <hr>
+    <hr />
     <footer>
-        <p>
-            <a href="#">Back to top</a>
-        </p>
-        <br>
-        <p>
-            <span class="nowrap">Copyright &copy; 2023</span><br>
-            <span class="nowrap">My Personal Website</span>
-        </p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+      <br />
+      <p>
+        <span class="nowrap">Copyright &copy; 2023</span><br />
+        <span class="nowrap">My Personal Website</span>
+      </p>
     </footer>
-</body>
-
+  </body>
 </html>
